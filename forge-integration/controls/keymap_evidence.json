@@ -1,0 +1,86 @@
+{
+  "schema": "keymap-evidence-v1",
+  "case": "resident-evil-degeneration-ngage",
+  "backend": "eka2l1",
+  "status": "release-0.1.0-validated",
+  "updated": "2026-11-18",
+  "note": "Mapeamento validado em execução real e teste físico com controle pelo usuário no Resident Evil: Degeneration (UID 0x2001AD82) em Nokia 5320d-1 (RM-409, modo paisagem 320x240). Botão Select/Back (button_id: 6) reservado ao Menu Select (Resume Game / Quit Game) do launcher nativo C17 em ambos os perfis.",
+
+  "softkeys": {
+    "advance_pause": {
+      "s3eSelector": 18,
+      "symbianScanCode": 164,
+      "symbianName": "EStdKeyDevice0 (Left Softkey)",
+      "screenCornerInLandscape": "upper-left",
+      "observedInGameLabels": ["SELECT", "NEXT", "PAUSE (Map / Inventory)"],
+      "hostKeyboardKeys": ["F1 (16777264)", "Tab (16777217)", "I (73)"],
+      "sdlControllerButtons": ["Start (button_id: 7)"]
+    },
+    "back_knife_skip": {
+      "s3eSelector": 17,
+      "symbianScanCode": 165,
+      "symbianName": "EStdKeyDevice1 (Right Softkey)",
+      "screenCornerInLandscape": "lower-left",
+      "observedInGameLabels": ["QUIT", "BACK", "SKIP", "KNIFE", "EXIT AIM"],
+      "hostKeyboardKeys": ["F2 (16777265)", "Esc (16777216)", "Q (81)"],
+      "sdlControllerButtons": ["B (button_id: 1)", "LB (button_id: 4)", "LT (button_id: 9 / 308)"]
+    }
+  },
+
+  "dpad": {
+    "up_forward": {
+      "symbianScanCode": 16,
+      "observedBehavior": "Menu Up / Walk Forward (automaticamente rotacionado pelo Symbian RM-409)",
+      "hostKeyboardKeys": ["Up Arrow (16777235)", "W (87)"],
+      "sdlControllerButtons": ["Dpad Up (11)", "Left Stick Up (303)"]
+    },
+    "down_back": {
+      "symbianScanCode": 17,
+      "observedBehavior": "Menu Down / Step Back",
+      "hostKeyboardKeys": ["Down Arrow (16777237)", "S (83)"],
+      "sdlControllerButtons": ["Dpad Down (13)", "Left Stick Down (302)"]
+    },
+    "left_turn": {
+      "symbianScanCode": 14,
+      "observedBehavior": "Turn Left / Aim Left / Subscreen Tab Left",
+      "hostKeyboardKeys": ["Left Arrow (16777234)", "A (65)"],
+      "sdlControllerButtons": ["Dpad Left (14)", "Left Stick Left (301)"]
+    },
+    "right_turn": {
+      "symbianScanCode": 15,
+      "observedBehavior": "Turn Right / Aim Right / Subscreen Tab Right",
+      "hostKeyboardKeys": ["Right Arrow (16777236)", "D (68)"],
+      "sdlControllerButtons": ["Dpad Right (12)", "Left Stick Right (300)"]
+    }
+  },
+
+  "actions": {
+    "confirm_context_aim_attack": {
+      "symbianScanCode": 167,
+      "inGameOptionsDefaultSecondary": "N-Gage Key B",
+      "hostKeyboardKeys": ["Enter (16777220)", "Numpad Enter (16777221)", "Space (32)"],
+      "sdlControllerButtons": ["A (button_id: 0)", "RT (button_id: 10 / 309)"]
+    },
+    "reload_and_shortcuts": {
+      "inGameOptionsDefault": "N-Gage Key A (remapeável em Options -> Controls)",
+      "symbianScanCodes": [180, 53, 49, 127, 1],
+      "hostKeyboardKeys": ["R (82 -> 180)", "0-9 (48..57)", "Backspace (16777219 -> 1)", "# / / (127)"],
+      "sdlControllerButtons": ["X (2 -> 180)", "RB (5 -> 53)", "Y (3 -> 49)"],
+      "selectButtonPolicy": "SDL2 button_id: 6 (Back / Select) removido do EKA2L1 e capturado via XInput (XINPUT_GAMEPAD_BACK) para abrir LegacyMobileForgeNGSelectMenu (Resume Game / Quit Game) com pausa do emulador via POST /v1/emulator/pause."
+    }
+  },
+
+  "eka2l1KeymapFile": {
+    "path": "bindings/resident_evil.yml",
+    "optionalRightStickPath": "bindings/resident_evil_rstick.yml",
+    "cliFlag": "--keybindprofile resident_evil",
+    "optionalRightStickCliFlag": "--keybindprofile resident_evil_rstick",
+    "rightStickInvestigation": {
+      "originalEngineConstraint": "Análise binária de Resident_Evil.unpacked.s3e (PlayerControls @ 424784) e localisation/ENGLISH.dat (S3E LZMA1): o motor utiliza tank controls sem strafe lateral, possuindo apenas 4 canais direcionais (16=Up, 17=Down, 14=Left, 15=Right) compartilhados entre caminhar/curvar, mirar laser/sniper e navegação horizontal/vertical em inventário e mapa.",
+      "sdl2RightStickMapping": "Modo Dual-Stick Completo (estilo RE4 HD): Analógico Esquerdo (303/302/301/300 -> 16/17/14/15) mantém as 4 direções completas para movimentação, curva e menus sem perder navegação horizontal; Analógico Direito (307/306/305/304 -> 16/17/14/15) adiciona rotação e mira em 4 direções, com R3 (311 -> 51 '3') para Zoom/Faca e L3 (310 -> 180) para Recarregar.",
+      "defaultPolicy": "resident_evil.yml permanece como padrão funcional validado; resident_evil_rstick.yml é selecionável na aba Controles (Dual-Stick Completo) e persistido em app/video.properties (controlProfile=rstick)."
+    },
+    "nativeGamepadBackend": "SDL2.dll + resources/gamecontrollerdb.txt (built into EKA2L1) + XInput (Select Menu)",
+    "physicalHardwareTested": true
+  }
+}

@@ -1,0 +1,292 @@
+# Native EKA2L1 keybind profile for Resident Evil: Degeneration (N-Gage 2.0, Nokia 5320 RM-409)
+# Supports Keyboard (Arrows + WASD + Enter/Space + F1/F2/Tab/Esc) and SDL2 Gamepads (controller_id: 0)
+- source:
+    type: key
+    data:
+      keycode: 16777264
+  target: 164
+- source:
+    type: key
+    data:
+      keycode: 16777217
+  target: 164
+- source:
+    type: key
+    data:
+      keycode: 73
+  target: 164
+- source:
+    type: key
+    data:
+      keycode: 16777265
+  target: 165
+- source:
+    type: key
+    data:
+      keycode: 16777216
+  target: 165
+- source:
+    type: key
+    data:
+      keycode: 81
+  target: 165
+- source:
+    type: key
+    data:
+      keycode: 16777266
+  target: 180
+- source:
+    type: key
+    data:
+      keycode: 16777267
+  target: 181
+- source:
+    type: key
+    data:
+      keycode: 16777220
+  target: 167
+- source:
+    type: key
+    data:
+      keycode: 16777221
+  target: 167
+- source:
+    type: key
+    data:
+      keycode: 32
+  target: 167
+- source:
+    type: key
+    data:
+      keycode: 16777235
+  target: 16
+- source:
+    type: key
+    data:
+      keycode: 87
+  target: 16
+- source:
+    type: key
+    data:
+      keycode: 16777237
+  target: 17
+- source:
+    type: key
+    data:
+      keycode: 83
+  target: 17
+- source:
+    type: key
+    data:
+      keycode: 16777234
+  target: 14
+- source:
+    type: key
+    data:
+      keycode: 65
+  target: 14
+- source:
+    type: key
+    data:
+      keycode: 16777236
+  target: 15
+- source:
+    type: key
+    data:
+      keycode: 68
+  target: 15
+- source:
+    type: key
+    data:
+      keycode: 82
+  target: 180
+- source:
+    type: key
+    data:
+      keycode: 48
+  target: 48
+- source:
+    type: key
+    data:
+      keycode: 49
+  target: 49
+- source:
+    type: key
+    data:
+      keycode: 50
+  target: 50
+- source:
+    type: key
+    data:
+      keycode: 51
+  target: 51
+- source:
+    type: key
+    data:
+      keycode: 52
+  target: 52
+- source:
+    type: key
+    data:
+      keycode: 53
+  target: 53
+- source:
+    type: key
+    data:
+      keycode: 54
+  target: 54
+- source:
+    type: key
+    data:
+      keycode: 55
+  target: 55
+- source:
+    type: key
+    data:
+      keycode: 56
+  target: 56
+- source:
+    type: key
+    data:
+      keycode: 57
+  target: 57
+- source:
+    type: key
+    data:
+      keycode: 42
+  target: 42
+- source:
+    type: key
+    data:
+      keycode: 47
+  target: 127
+- source:
+    type: key
+    data:
+      keycode: 35
+  target: 127
+- source:
+    type: key
+    data:
+      keycode: 16777219
+  target: 1
+- source:
+    type: key
+    data:
+      keycode: 16777248
+  target: 18
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 11
+  target: 16
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 13
+  target: 17
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 14
+  target: 14
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 12
+  target: 15
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 303
+  target: 16
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 302
+  target: 17
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 301
+  target: 14
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 300
+  target: 15
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 0
+  target: 167
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 10
+  target: 167
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 309
+  target: 167
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 1
+  target: 165
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 4
+  target: 165
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 9
+  target: 165
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 308
+  target: 165
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 7
+  target: 164
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 2
+  target: 180
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 5
+  target: 53
+- source:
+    type: controller
+    data:
+      controller_id: 0
+      button_id: 3
+  target: 49
+

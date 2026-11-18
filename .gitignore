@@ -1,0 +1,72 @@
+# ==============================================================================
+# Resident Evil: Degeneration (N-Gage 2.0 on Windows) - .gitignore
+# ==============================================================================
+
+# Public releases and packaging artifacts (Per user rule & legal compliance)
+release/
+*.zip
+*.tar.gz
+*.7z
+
+# Staged user files and firmware import folder
+arquivos-necessarios-launcher/
+backups/
+compat/
+
+# Proprietary ROMs, Symbian packages, firmware dumps, and game assets
+*.rom
+*.ROM
+*.rpkg
+*.RPKG
+*.sis
+*.SIS
+*.sisx
+*.SISX
+*.n-gage
+*.N-GAGE
+SYM.ROM
+SYM.RPKG
+ngage_client.sis
+Resident Evil Degeneration.n-gage
+
+# Personal user saves and runtime profile data
+app/saves_backup/
+*.i3d
+*.dat
+*.db
+!app/launcher-ng.ini
+!app/video.properties
+
+# Logs and runtime diagnostics
+*.log
+app/logs/
+EKA2L1.log
+EKA2L1_TakeThis.log
+launcher-ng.log
+
+# EKA2L1 runtime directories if unpacked locally
+runtime/
+data/
+drives/
+drive_c/
+drive_e/
+drive_z/
+crashdumps/
+*.dmp
+
+# Compiler & build temporary files
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+__pycache__/
+*.pyc
+*.pyo
+
+# OS and Editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

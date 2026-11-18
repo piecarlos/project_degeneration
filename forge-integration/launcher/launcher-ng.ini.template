@@ -1,0 +1,14 @@
+; launcher-ng.ini — Perfil do launcher C17 para Resident Evil: Degeneration (N-Gage 2.0)
+; Lido por GameLauncherNG.c (forge-integration/launcher/).
+; Codifique em UTF-16LE ao gravar em app/launcher-ng.ini para APIs Win32 INI.
+
+[launcher-ng]
+title             = Resident Evil: Degeneration (N-Gage 2.0)
+eka2l1_exe        = ..\EKA2L1\eka2l1_qt.exe
+device            = RM-409
+game_uid          = 0x2001AD82
+keybind_profile   = resident_evil
+artwork           = assets\bezel.png
+bezel_scale_ratio = 67
+control_port      = 28182
+language          = auto

@@ -1,0 +1,23 @@
+# Auto detect text files and perform LF normalization on checkin
+* text=auto
+
+# Source code and config files
+*.c text eol=crlf
+*.h text eol=crlf
+*.py text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ini text eol=crlf
+*.frag text eol=lf
+*.md text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.exe binary

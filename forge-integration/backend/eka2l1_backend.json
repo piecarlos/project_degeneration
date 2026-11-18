@@ -1,0 +1,83 @@
+{
+  "schema": "forge-integration-v1",
+  "case": "resident-evil-degeneration-ngage",
+  "backend": "eka2l1",
+  "status": "validated-playable-direct-launch",
+  "updated": "2026-11-17",
+
+  "description": "Backend modular EKA2L1 validado no Legacy Mobile Forge para Resident Evil: Degeneration (N-Gage 2.0, UID 0x2001AD82). Coexiste sem alterações com o runtime de referência S3E/Unicorn (Trace-S3EBoot.py).",
+
+  "launchContract": {
+    "note": "Validado empiricamente: --runng aplica-se somente a cartões MMC do N-Gage 1.0 (S60v1) e falha em S60v3. Para N-Gage 2.0, a inicialização direta sem navegação manual utiliza a Control API loopback nativa do EKA2L1 (--debug-control-port) com GET /v1/ngage2/games seguido de POST /v1/ngage2/games/0x2001AD82/launch via IPC do PlayServer.",
+    "executable": "eka2l1_qt.exe",
+    "versionTested": "v0.0.1 / 0.0.9 (master-044699473)",
+    "device": {
+      "flag": "--device",
+      "value": "RM-409",
+      "model": "Nokia 5320d-1 (S60v3 FP2 / epoc93fp2)",
+      "status": "validated"
+    },
+    "keybindProfile": {
+      "flag": "--keybindprofile",
+      "value": "resident_evil",
+      "file": "bindings/resident_evil.yml",
+      "status": "validated-native-sdl2-and-keyboard"
+    },
+    "directLaunchApi": {
+      "flag": "--debug-control-port",
+      "defaultPort": 28182,
+      "steps": [
+        "GET http://127.0.0.1:28182/v1/status (wait until started=true)",
+        "GET http://127.0.0.1:28182/v1/ngage2/games (initialize PlayServer)",
+        "POST http://127.0.0.1:28182/v1/ngage2/games/0x2001AD82/launch (direct IPC game launch)"
+      ],
+      "status": "validated-zero-manual-navigation"
+    },
+    "legacyRunngFinding": {
+      "flag": "--runng",
+      "status": "incompatible-with-ngage2",
+      "observedError": "Can't find the game mounted in E drive! (N-Gage 1.0 MMC only)"
+    }
+  },
+
+  "firmwarePolicy": {
+    "required": true,
+    "source": "user-provisioned-local",
+    "autoDownload": false,
+    "installedDeviceCode": "RM-409",
+    "ngageRuntime": "N-Gage Client v1.40.1557 + TZDB.DBZ"
+  },
+
+  "processModel": {
+    "type": "child-process",
+    "launchedBy": "GameLauncherNG.c (ResidentEvilLauncher.exe)",
+    "communication": "WinHTTP loopback Control API + process exit code + app/logs/launcher-ng.log",
+    "windowMode": "eka2l1-owns-opengl-window-arranged-by-launcher",
+    "exitCodeOnWindowClose": 0
+  },
+
+  "presentation": {
+    "logicalResolution": "320x240 (Symbian screen mode 2, landscape)",
+    "hostRendererApi": "OpenGL (ogl_graphics_driver in eka2l1_qt.exe x64)",
+    "bezel": {
+      "file": "app/assets/bezel.png",
+      "sha256": "B2326D1BE44FD52FA4844FFF58595F37E1866B0C6D6A7F750E32D33DE54C167C",
+      "integration": "EKA2L1 native background-image + background-image-keep-aspect=true + screen-scale-ratio=67",
+      "status": "validated"
+    },
+    "scale2x": {
+      "shader": "resources/upscale/Scale2x.frag",
+      "compatFiles": ["compat/2001AD82.yml", "compat/20003B78.yml"],
+      "scope": "game-framebuffer-before-bezel",
+      "defaultEnabled": false,
+      "selectableInLauncher": true,
+      "status": "validated-optional"
+    },
+    "reshade": {
+      "enabled": false,
+      "status": "disabled-by-directive",
+      "hostApiIdentified": "OpenGL (WGL)",
+      "note": "Mantido desativado conforme diretriz do usuário e risco conhecido de OpenGL/AMD documentado em RESHADE.md."
+    }
+  }
+}
