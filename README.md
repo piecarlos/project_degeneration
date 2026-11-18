@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="README.pt-BR.md"><b>🇧🇷 Leia em Português (pt-BR)</b></a> •
+  <a href="#download"><b>Download</b></a> •
   <a href="#key-features"><b>Features</b></a> •
   <a href="#quick-start--setup-guide"><b>Setup Guide</b></a> •
   <a href="#controls--gamepad-mappings"><b>Controls</b></a> •
@@ -22,6 +23,24 @@
   <img src="https://img.shields.io/badge/Build%20Status-5%2F5%20Verified%20Passing-success.svg" alt="Verification Passing">
   <img src="https://img.shields.io/badge/License-GPLv3%20%2F%20MIT-lightgrey.svg" alt="License">
 </p>
+
+<p align="center">
+  <a href="https://github.com/piecarlos/project_degeneration/releases/download/v0.1.0/ResidentEvilDegeneration-0.1.0-windows-x64.zip">
+    <img src="https://img.shields.io/badge/Direct_Download-Release_v0.1.0_(ZIP_·_50_MB)-success?style=for-the-badge&logo=windows&logoColor=white" alt="Download Release v0.1.0">
+  </a>
+  <a href="https://github.com/piecarlos/project_degeneration/releases/tag/v0.1.0">
+    <img src="https://img.shields.io/badge/GitHub-Releases_Page-blue?style=for-the-badge&logo=github&logoColor=white" alt="Releases Page">
+  </a>
+</p>
+
+---
+
+## Download
+
+> 🚀 **[Download ResidentEvilDegeneration-0.1.0-windows-x64.zip](https://github.com/piecarlos/project_degeneration/releases/download/v0.1.0/ResidentEvilDegeneration-0.1.0-windows-x64.zip)**  
+> *(50.3 MB · Windows x64 Portable Package · SHA-256: `7CA69435B47D14DB820CCBD5DE273950FE995475BB9A8A1054E9164DC73EE182`)*  
+>
+> 📌 All release versions, changelogs, and package tags are hosted on [GitHub Releases](https://github.com/piecarlos/project_degeneration/releases).
 
 ---
 
@@ -94,13 +113,14 @@ This repository provides the **complete, standalone native Windows x64 port and 
   3. `Resident Evil Degeneration.n-gage` (or extracted `.sis`, UID `0x2001AD82`).
 
 ### 2. Initial Setup
-1. Launch **`ResidentEvilLauncher.exe`** (or `jogar_resident_evil.bat`).
-2. If any prerequisite files are missing, the launcher will automatically navigate to the **System** tab.
-3. Import your files using either:
+1. Download and extract **`ResidentEvilDegeneration-0.1.0-windows-x64.zip`** to any folder.
+2. Launch **`ResidentEvilLauncher.exe`** (or `jogar_resident_evil.bat`).
+3. If any prerequisite files are missing, the launcher will automatically navigate to the **System** tab.
+4. Import your files using either:
    - **Import Full Folder**: Put your 4 files in a folder (e.g. `arquivos-necessarios-launcher/`), click the button, and the launcher will parse and install everything in sequence.
    - **Select Files (Ctrl+A)**: Click the button, navigate to your files, select all of them, and click Open.
    - **Link Existing EKA2L1**: If you already have EKA2L1 installed with firmware, point to its directory for instant zero-copy linking.
-4. Once the progress bar reaches 100%, switch to the **Display** tab, configure your preferred resolution and filter, and click **PLAY GAME** (`Enter` or `Start`).
+5. Once the progress bar reaches 100%, switch to the **Display** tab, configure your preferred resolution and filter, and click **PLAY GAME** (`Enter` or `Start`).
 
 ### 3. Command-Line Interface (CLI)
 ```powershell
@@ -168,14 +188,6 @@ flowchart TD
     Launcher -->|"Post-session save integrity check"| Backup
 ```
 
-### Process Management Highlights
-- **Single-Instance Mutex**: `Local\ResidentEvilDegeneration_InstanceMutex` prevents port collisions and duplicate runtime processes.
-- **Dynamic API Port Allocation**: Scans ports `28182` through `28199` to ensure clean communication even if another service is bound.
-- **Three-Stage Graceful Shutdown**:
-  1. REST shutdown trigger: `DELETE /v1/session`.
-  2. Windows messaging close: `WM_CLOSE` dispatched to all EKA2L1 top-level windows.
-  3. Kernel enforcement: `TerminateJobObject` guarantees all threads and subprocesses are cleared with zero orphans.
-
 ---
 
 ## Verification & Test Results
@@ -216,7 +228,7 @@ To compile the native launcher from source:
 ## Repository Structure
 
 ```
-resident-emulation/
+project_degeneration/
 ├── app/
 │   ├── assets/
 │   │   └── bezel.png               # Custom 1080p illustrated bezel frame
@@ -234,7 +246,6 @@ resident-emulation/
 │   ├── Build-NGageRelease.ps1      # Release packaging & distribution script
 │   ├── Verify-Release010.py        # Release compliance & integration test
 │   └── Verify-ProcessAndSavesNG.py # Process supervisor & save test suite
-├── evidence/                       # Visual proof screenshots and validation captures
 ├── jogar_resident_evil.bat         # User convenience batch launcher
 ├── jogar_direto.bat                # Direct boot bypass script
 ├── CHANGELOG.md                    # Release history and milestone logs

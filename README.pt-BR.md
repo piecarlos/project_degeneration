@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="README.md"><b>🇺🇸 English Version</b></a> •
+  <a href="#download"><b>Download</b></a> •
   <a href="#principais-recursos"><b>Recursos</b></a> •
   <a href="#guia-rápido-de-instalação-e-uso"><b>Instalação</b></a> •
   <a href="#controles-e-mapeamento-de-gamepad"><b>Controles</b></a> •
@@ -22,6 +23,24 @@
   <img src="https://img.shields.io/badge/Status-Jog%C3%A1vel%20%2F%20Validado-success.svg" alt="Status Validado">
   <img src="https://img.shields.io/badge/Licen%C3%A7a-GPLv3%20%2F%20MIT-lightgrey.svg" alt="Licença">
 </p>
+
+<p align="center">
+  <a href="https://github.com/piecarlos/project_degeneration/releases/download/v0.1.0/ResidentEvilDegeneration-0.1.0-windows-x64.zip">
+    <img src="https://img.shields.io/badge/Download_Direto-Release_v0.1.0_(ZIP_·_50_MB)-success?style=for-the-badge&logo=windows&logoColor=white" alt="Baixar Release v0.1.0">
+  </a>
+  <a href="https://github.com/piecarlos/project_degeneration/releases/tag/v0.1.0">
+    <img src="https://img.shields.io/badge/GitHub-P%C3%A1gina_de_Releases-blue?style=for-the-badge&logo=github&logoColor=white" alt="Página de Releases">
+  </a>
+</p>
+
+---
+
+## Download
+
+> 🚀 **[Download Direto: ResidentEvilDegeneration-0.1.0-windows-x64.zip](https://github.com/piecarlos/project_degeneration/releases/download/v0.1.0/ResidentEvilDegeneration-0.1.0-windows-x64.zip)**  
+> *(50.3 MB · Pacote Portátil Pré-configurado para Windows x64 · SHA-256: `7CA69435B47D14DB820CCBD5DE273950FE995475BB9A8A1054E9164DC73EE182`)*  
+>
+> 📌 Todas as versões, histórico de mudanças e arquivos de release estão disponíveis em [GitHub Releases](https://github.com/piecarlos/project_degeneration/releases).
 
 ---
 
@@ -94,13 +113,14 @@ Este repositório contém o **ecossistema completo e independente de launcher e 
   3. `Resident Evil Degeneration.n-gage` (ou `.sis` do jogo, UID `0x2001AD82`).
 
 ### 2. Primeiro Uso
-1. Execute **`ResidentEvilLauncher.exe`** (ou `jogar_resident_evil.bat`).
-2. Se faltar algum arquivo de sistema ou do jogo, o launcher abre automaticamente na aba **Sistema**.
-3. Importe os arquivos utilizando uma das opções:
+1. Baixe e extraia o pacote **`ResidentEvilDegeneration-0.1.0-windows-x64.zip`** em qualquer pasta.
+2. Execute **`ResidentEvilLauncher.exe`** (ou `jogar_resident_evil.bat`).
+3. Se faltar algum arquivo de sistema ou do jogo, o launcher abre automaticamente na aba **Sistema**.
+4. Importe os arquivos utilizando uma das opções:
    - **Importar Pasta Completa**: aponte para uma pasta com seus 4 arquivos (ex.: `arquivos-necessarios-launcher\`). O launcher detecta, descompacta e registra tudo em sequência com barra de progresso.
    - **Selecionar Arquivos (Ctrl+A)**: clique no botão, navegue até a pasta dos arquivos, selecione todos (`Ctrl+A`) e confirme.
    - **Vincular EKA2L1 Existente**: caso já possua o emulador instalado com firmware, aponte a pasta raiz para vinculação instantânea.
-4. Concluída a importação, alterne para a aba **Apresentação**, ajuste resolução e filtro, e clique em **JOGAR** (`Enter` ou `Start`).
+5. Concluída a importação, alterne para a aba **Apresentação**, ajuste resolução e filtro, e clique em **JOGAR** (`Enter` ou `Start`).
 
 ### 3. Execução por Linha de Comando (CLI)
 ```powershell
@@ -206,7 +226,7 @@ A estabilidade e integridade da aplicação são verificadas por duas suítes au
 ## Estrutura do Repositório
 
 ```
-resident-emulation/
+project_degeneration/
 ├── app/
 │   ├── assets/
 │   │   └── bezel.png               # Moldura ilustrada personalizada 1080p
@@ -224,7 +244,6 @@ resident-emulation/
 │   ├── Build-NGageRelease.ps1      # Script de empacotamento de distribuição
 │   ├── Verify-Release010.py        # Teste de conformidade de release
 │   └── Verify-ProcessAndSavesNG.py # Teste de processos e saves
-├── evidence/                       # Capturas e evidências visuais de teste
 ├── jogar_resident_evil.bat         # Atalho de execução rápida
 ├── jogar_direto.bat                # Atalho para inicialização direta
 ├── CHANGELOG.md                    # Histórico detalhado de versões

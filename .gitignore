@@ -8,6 +8,10 @@ release/
 *.tar.gz
 *.7z
 
+# Internal verification evidence and maintenance scripts
+evidence/
+subir_para_github.bat
+
 # Staged user files and firmware import folder
 arquivos-necessarios-launcher/
 backups/
