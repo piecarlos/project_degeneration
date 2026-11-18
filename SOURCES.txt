@@ -1,24 +1,34 @@
-﻿Legacy Mobile Forge — N-Gage 2.0 Distribution Notices (Release 0.1.0)
+﻿Project Degeneration — N-Gage 2.0 Distribution Notices (Release 0.1.0)
 ========================================================================
 
 1. Native C17 Launcher (ResidentEvilLauncher.exe)
-   - SHA-256: 9162FC84F9D980D595CCB15986402F78FF47F1B10EF706B048868E3680C2194A
-   - License: GPL-3.0-or-later (see LICENSE)
-   - Source: https://github.com/piecarlos/legacy-mobile-forge
+   - Binary SHA-256: 9162FC84F9D980D595CCB15986402F78FF47F1B10EF706B048868E3680C2194A
+   - License: MIT License / GPL-3.0-or-later (see LICENSE and THIRD-PARTY.md)
+   - Source Code: https://github.com/piecarlos/project_degeneration
+   - Architecture: C17 Win32 / GDI+, Windows Kernel Job Objects, REST Control API Supervisor
 
 2. EKA2L1 Symbian / N-Gage Emulator Runtime (runtime/eka2l1/eka2l1_qt.exe)
-   - Upstream Version: master-90f46cf91 (x64 Windows)
+   - Upstream Version: master-90f46cf91 (Windows x64)
    - Binary SHA-256: 6F0DB054D15427BDF34504E0D07BB250216D9D3B3E0B2C52488FD71F49B8C063
-   - Corresponding Source: https://github.com/EKA2L1/EKA2L1
-   - License: GPL-2.0-or-later (bundled runtime libraries subject to their respective licenses below)
+   - Corresponding Source (GPLv3 Compliance): https://github.com/EKA2L1/EKA2L1
+   - License: GNU General Public License v3.0 (GPLv3)
 
 3. Bundled Runtime Libraries (runtime/eka2l1/)
-   - SDL2.dll (SHA-256: 74889602F25135DB1489529DC0A5170F65FC756886B744AA6A414529B8ABD3D9) & gamecontrollerdb.txt: zlib License (https://github.com/libsdl-org/SDL)
-   - Qt 6 (Qt6Core, Qt6Gui, Qt6Widgets, Qt6Network, Qt6Svg, Qt6Multimedia + qt/ plugins): LGPLv3 / GPLv3 (https://www.qt.io/)
-   - FFmpeg (avcodec-61, avformat-61, avutil-59, swresample-5, swscale-8): LGPLv2.1+ / GPL (https://ffmpeg.org/)
-   - OpenSSL (libcrypto-3-x64, libssl-3-x64): Apache-2.0 (https://www.openssl.org/)
-   - DirectX Shader Compiler / D3Dcompiler_47: MIT / Microsoft Redistributable
+   - SDL2.dll (SHA-256: 74889602F25135DB1489529DC0A5170F65FC756886B744AA6A414529B8ABD3D9) & gamecontrollerdb.txt:
+     zlib License (https://github.com/libsdl-org/SDL)
+   - Qt 6 (Qt6Core, Qt6Gui, Qt6Widgets, Qt6Network, Qt6Svg, Qt6Multimedia + qt/ plugins):
+     LGPLv3 / GPLv3 (https://www.qt.io/)
+   - FFmpeg (avcodec-61, avformat-61, avutil-59, swresample-5, swscale-8):
+     LGPLv2.1+ / GPL (https://ffmpeg.org/)
+   - OpenSSL (libcrypto-3-x64, libssl-3-x64):
+     Apache-2.0 (https://www.openssl.org/)
+   - DirectX Shader Compiler / D3Dcompiler_47:
+     Microsoft Redistributable / MIT
+   - Scale2x GLSL Shader (presentation/Scale2x.frag):
+     GNU General Public License (Andrea Mazzoleni, http://www.scale2x.it/)
 
-4. Excluded Content Policy
-   - This public package includes NO Symbian ROMs, NO RPKG firmware images, NO N-Gage client SIS,
-     NO commercial game files (.n-gage/.sis/.exe), NO personal saves, and NO ReShade binaries.
+4. Strict Content Policy
+   - This public package includes NO Symbian ROMs (SYM.ROM), NO RPKG firmware images (SYM.RPKG),
+     NO N-Gage client SIS (ngage_client.sis), NO commercial game files (.n-gage/.sis),
+     NO personal save games, and NO ReShade binary DLLs.
+   - End-users must provide their own legitimately acquired firmware and game backups.

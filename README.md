@@ -1,6 +1,10 @@
 # Resident Evil: Degeneration — N-Gage 2.0 on Windows (Release 0.1.0)
 
 <p align="center">
+  <b>Resident Evil Degeneration for Windows — Standalone N-Gage 2.0 gaming experience powered by EKA2L1, featuring controller support, custom launcher and enhanced presentation.</b>
+</p>
+
+<p align="center">
   <img src="docs/assets/cover.png" alt="Resident Evil: Degeneration running on Windows with custom bezel" width="850">
 </p>
 
@@ -11,7 +15,8 @@
   <a href="#quick-start--setup-guide"><b>Setup Guide</b></a> •
   <a href="#controls--gamepad-mappings"><b>Controls</b></a> •
   <a href="#technical-architecture"><b>Architecture</b></a> •
-  <a href="#verification--test-results"><b>Tests</b></a> •
+  <a href="#credits--acknowledgments"><b>Credits</b></a> •
+  <a href="#reporting-bugs--feedback"><b>Bug Report</b></a> •
   <a href="#legal-notice"><b>Legal Notice</b></a>
 </p>
 
@@ -48,7 +53,7 @@
 
 **Resident Evil: Degeneration (N-Gage 2.0)** is Capcom's atmospheric 3D third-person survival horror title released in 2008 for Symbian S60v3 OS 9.3 (Nokia N-Gage 2.0, UID `0x2001AD82`, target device Nokia 5320d-1 `RM-409`).
 
-This repository provides the **complete, standalone native Windows x64 port and launcher ecosystem** built using **C17 Win32 / GDI+**, an embedded **EKA2L1 portable runtime supervisor**, **Windows Job Objects** process sandboxing, an **in-game Select Menu overlay**, atomic save-state protection, and custom presentation scaling.
+This repository provides a **standalone Windows launcher powered by EKA2L1**, built using **C17 Win32 / GDI+**, an embedded **EKA2L1 portable runtime supervisor**, **Windows Job Objects** process sandboxing, an **in-game Select Menu overlay**, atomic save-state protection, and custom presentation scaling.
 
 > [!IMPORTANT]
 > **Strict Copyright & Fair-Use Compliance**: This repository and its releases **contain NO copyrighted ROMs, proprietary Nokia firmware, Capcom game binaries (`.n-gage`/`.sis`), personal saves, or ReShade binary DLLs**. Users must provide their own legitimate firmware and game files, which can be imported in seconds via the unified graphical importer.
@@ -113,7 +118,7 @@ This repository provides the **complete, standalone native Windows x64 port and 
   3. `Resident Evil Degeneration.n-gage` (or extracted `.sis`, UID `0x2001AD82`).
 
 ### 2. Initial Setup
-1. Download and extract **`ResidentEvilDegeneration-0.1.0-windows-x64.zip`** to any folder.
+1. Download and extract **`ResidentEvilDegeneration-0.1.0-windows-x64.zip`** to any writable folder.
 2. Launch **`ResidentEvilLauncher.exe`** (or `jogar_resident_evil.bat`).
 3. If any prerequisite files are missing, the launcher will automatically navigate to the **System** tab.
 4. Import your files using either:
@@ -211,6 +216,27 @@ The implementation is verified by an automated regression test suite:
 
 ---
 
+## Credits & Acknowledgments
+
+- **EKA2L1 Project & Contributors** ([EKA2L1 on GitHub](https://github.com/EKA2L1/EKA2L1)): For the open-source Symbian OS / N-Gage 2.0 emulation core, device CPU emulation, and the REST Control API. Special thanks to `bentokun`, `shadowe32`, and all core contributors.
+- **libSDL Team** ([libsdl.org](https://www.libsdl.org/)): For Simple DirectMedia Layer (SDL2) and the unified gamepad mapping database (`gamecontrollerdb.txt`).
+- **Qt Project** ([qt.io](https://www.qt.io/)): For the Qt6 GUI runtime framework and multimedia plugins.
+- **FFmpeg Developers** ([ffmpeg.org](https://ffmpeg.org/)): For audio/video decoding libraries (`libavcodec`, `libavformat`, `libswresample`).
+- **Andrea Mazzoleni** ([scale2x.it](http://www.scale2x.it/)): For the Scale2x pixel-art scaling algorithm.
+- **Capcom Co., Ltd.**: For creating the original *Resident Evil: Degeneration* mobile survival horror game experience.
+- **Nokia Corporation**: For the historical N-Gage 2.0 gaming platform and Symbian OS ecosystem.
+
+---
+
+## Reporting Bugs & Feedback
+
+Found an issue or want to suggest an improvement?
+- **Bug Report**: Open a new issue using our [Bug Report Template](https://github.com/piecarlos/project_degeneration/issues/new?template=bug_report.md). Please include your Windows version, controller model, and launcher log (`app/logs/launcher-ng.log` if available).
+- **Feature Request**: Suggest new launcher features using our [Feature Request Template](https://github.com/piecarlos/project_degeneration/issues/new?template=feature_request.md).
+- **Privacy Reminder**: Please **do NOT attach ROMs, firmware dumps, game binaries, or personal save files** to public GitHub issues.
+
+---
+
 ## Building from Source
 
 To compile the native launcher from source:
@@ -229,6 +255,8 @@ To compile the native launcher from source:
 
 ```
 project_degeneration/
+├── .github/
+│   └── ISSUE_TEMPLATE/            # GitHub issue templates (Bug Report, Feature Request)
 ├── app/
 │   ├── assets/
 │   │   └── bezel.png               # Custom 1080p illustrated bezel frame
@@ -249,6 +277,9 @@ project_degeneration/
 ├── jogar_resident_evil.bat         # User convenience batch launcher
 ├── jogar_direto.bat                # Direct boot bypass script
 ├── CHANGELOG.md                    # Release history and milestone logs
+├── LICENSE                         # GPLv3 / MIT project licenses
+├── THIRD-PARTY.md                  # Third-party notices and source code links
+├── SOURCES.txt                     # Upstream sources and binary hash verification
 ├── README.md                       # English documentation (Primary)
 ├── README.pt-BR.md                 # Full Brazilian Portuguese documentation
 └── .gitignore                      # Strict legal & artifact exclusion rules

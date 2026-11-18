@@ -27,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **Bilingual Documentation & Cover Artwork**:
   - Full English (`README.md`) and Portuguese (`README.pt-BR.md`) documentation suites.
   - High-resolution cover artwork (`docs/assets/cover.png`) showcasing 3D gameplay inside the custom bezel.
+  - Project positioning clarified as *Standalone Windows launcher powered by EKA2L1*.
+  - Credits to EKA2L1 team, SDL2, Qt, FFmpeg, and Scale2x in documentation.
+  - GitHub issue templates for Bug Reports and Feature Requests (`.github/ISSUE_TEMPLATE/`).
+  - Comprehensive source code compliance and distribution notices in `THIRD-PARTY.md` and `SOURCES.txt`.
 
 ### Changed & Fixed (English)
 - **Dual-Stick Control Scheme (`resident_evil_rstick.yml`)**:
@@ -59,6 +63,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   - Espelhamento atômico de saves (`app/saves_backup/`) com autorrecuperação contra arquivos zerados.
 - **Documentação Bilíngue e Capa**:
   - Documentação completa em inglês (`README.md`) e português (`README.pt-BR.md`), com capa oficial em `docs/assets/cover.png`.
+  - Posicionamento oficial do projeto como *launcher autônomo para Windows baseado no EKA2L1*.
+  - Créditos aos desenvolvedores do EKA2L1, SDL2, Qt, FFmpeg e Scale2x.
+  - Modelos de issue para relato de bugs e sugestões no GitHub (`.github/ISSUE_TEMPLATE/`).
+  - Notificações de conformidade com a GPLv3 em `THIRD-PARTY.md` e `SOURCES.txt`.
 
 ### Corrigido e Ajustado (Português)
 - **Analógico Esquerdo e Dual-Stick (`resident_evil_rstick.yml`)**:
