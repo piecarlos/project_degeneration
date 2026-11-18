@@ -43,7 +43,7 @@
 ## Download
 
 > 🚀 **[Download ResidentEvilDegeneration-0.1.0-windows-x64.zip](https://github.com/piecarlos/project_degeneration/releases/download/v0.1.0/ResidentEvilDegeneration-0.1.0-windows-x64.zip)**  
-> *(50.3 MB · Windows x64 Portable Package · SHA-256: `7CA69435B47D14DB820CCBD5DE273950FE995475BB9A8A1054E9164DC73EE182`)*  
+> *(50.3 MB · Windows x64 Portable Package · SHA-256: `7CA6943538F129CCC9745FA5886E36A7C2D594DF572C8DA54B5556F53FDB6C91`)*  
 >
 > 📌 All release versions, changelogs, and package tags are hosted on [GitHub Releases](https://github.com/piecarlos/project_degeneration/releases).
 
